@@ -1,7 +1,3 @@
----
-
----
-
 // Do All Dom Manipulation After The DOM content is full loaded
 document.addEventListener("DOMContentLoaded",function(){
     (function main(){

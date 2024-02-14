@@ -1,7 +1,3 @@
----
-
----
-
 // Constant setups for reuse throughout document
 const ANCHOR_LINKS_ID = [...document.querySelectorAll(".anchor")].map((anchor) => anchor.id);
 const NAVIGATION_LINK_ELEMENTS = document.querySelectorAll(".sticky-nav a");

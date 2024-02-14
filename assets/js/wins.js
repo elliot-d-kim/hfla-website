@@ -1,6 +1,3 @@
----
-
----
   //assigning the google form questions to variables for readability
   //these variables correspond with a question on the google form
   //these variables can be used as a key to access the data

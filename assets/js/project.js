@@ -1,6 +1,3 @@
----
----
-
 /* 
   Fetch the correct project
 */

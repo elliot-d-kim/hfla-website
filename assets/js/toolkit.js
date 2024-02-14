@@ -1,7 +1,3 @@
----
-
----
-
 document.addEventListener("DOMContentLoaded", () => {
     const currentFilters = {projectStatus: [], practiceAreas: [], projectTools: [], projectResourceType: [], projectTechnologies: [], projectSource: [], projectContributors: []}
 
