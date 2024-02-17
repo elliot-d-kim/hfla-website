@@ -36,7 +36,6 @@
 	}
 
   function main() {
-    {% assign localData = site.data.external._wins-data %}
     // Escapes JSON for injections. See: #2134. If this is no longer the case, perform necessary edits, and remove this comment
     const cardData = JSON.parse(decodeURIComponent("{{ localData | jsonify | uri_escape }}"));
     window.localStorage.setItem('data', JSON.stringify(cardData));
@@ -279,7 +278,6 @@
 	}
 
   function makeCards(data) {
-	{% assign githubData = site.data.external.github-data %}
 	// Escapes JSON for injections. See: #2134. If this is no longer the case, perform necessary edits, and remove this comment.
   	let githubData = JSON.parse(decodeURIComponent("{{ githubData | jsonify | uri_escape }}"));
 
