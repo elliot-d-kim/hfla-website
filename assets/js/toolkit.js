@@ -49,6 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Retrieve filter categories from guide pages
 function retrieveFilterCategories() {
+    {% assign projects = site.guide-pages | where: "display", "true" %}
     let projects = JSON.parse(decodeURIComponent("{{ projects | jsonify | uri_escape }}"))
 
     const practiceAreas = []

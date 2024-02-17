@@ -1,6 +1,7 @@
 /* 
   Fetch the correct project
 */
+{% assign projects = site.data.external.github-data %}
 // Escapes JSON for injections. See: #2134. If this is no longer the case, perform necessary edits, and remove this comment.
 let projects = JSON.parse(decodeURIComponent("{{ projects | jsonify | uri_escape }}"));
 
@@ -126,7 +127,7 @@ let projectTitle = scriptTag.getAttribute("projectTitle");
 let meetingsFound = [];
 
 // Grab the meeting time data from the vrms_data.json file
-
+{% assign vrmsData = site.data.external.vrms_data %}
 // Escapes JSON for injections. See: #2134. If this is no longer the case, perform necessary edits, and remove this comment.
 const vrmsData = JSON.parse(decodeURIComponent("{{ vrmsData | jsonify | uri_escape }}"));
 
