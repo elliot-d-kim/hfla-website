@@ -13,7 +13,7 @@ name: "CodeQL"
 
 on:
   push:
-    branches: [ 'gh-pages' ]
+    branches: [ 'aidanwsimmons-resolve-codeql-alert-51-6622' ]
   pull_request:
     # The branches below must be a subset of the branches above
     branches: [ 'gh-pages' ]
