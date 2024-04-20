@@ -8,7 +8,7 @@ jobs:
   # unless overridden when issue has "LA website bot" in title, then 'Questions / In Review'
   Add-Issue-To-Project-Board:
     runs-on: ubuntu-latest
-    if: ${{ github.event_name == 'issues' && github.event.action == 'opened' }}
+    if: ${{ github.event_name == 'issues' && github.event.action == 'opened' && github.repository == 'hackforla/website'}}
     env:
       COLUMN_NAME: ${{ contains(github.event.issue.title, 'Hack for LA website bot') && 'Questions / In Review' || 'New Issue Approval' }}
     steps:
@@ -23,7 +23,7 @@ jobs:
   Add-Missing-Labels-To-Issues:
     runs-on: ubuntu-latest
     # Only trigger this action when an issue is newly created
-    if: ${{ github.event_name == 'issues' && (github.event.action == 'opened' || github.event.action == 'transferred')}}
+    if: ${{ github.event_name == 'issues' && (github.event.action == 'opened' || github.event.action == 'transferred') && github.repository == 'hackforla/website'}}
     steps:
       - uses: actions/checkout@v4    
       # Check if the issue has required labels
@@ -62,7 +62,7 @@ jobs:
   Ask-For-Preliminary-update:
     runs-on: ubuntu-latest
     #Triggers when the issue is newly assigned
-    if: ${{ github.event_name == 'issues' && github.event.action == 'assigned'}}
+    if: ${{ github.event_name == 'issues' && github.event.action == 'assigned' && github.repository == 'hackforla/website'}}
     steps:
       - uses: actions/checkout@v4  
 
